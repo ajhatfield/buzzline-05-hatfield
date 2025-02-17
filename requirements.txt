@@ -51,7 +51,7 @@
 
 ### Windows Command (don't include the #):
 # py -m pip install --upgrade pip setuptools wheel
-# py -m pip install --upgrade -r requirements.txt
+# py -m pip install -r requirements.txt
 
 ### Mac/Linux Command (don't include the #):
 # python3 -m pip install --upgrade pip setuptools wheel
@@ -89,27 +89,44 @@ loguru
 python-dotenv
 
 # ======================================================
+# DATA ANALYSIS 
+# ======================================================
+
+# Numerical computations and arrays (20-30 MB)
+numpy
+
+# Data manipulation and analysis (built on numpy, 10-20 MB)
+pandas
+
+# ======================================================
+# VISUALIZATION
+# ======================================================
+
+# Core library for creating visualizations (~30 MB)
+matplotlib
+
+# Statistical data visualization library built on matplotlib (~2-5 MB)
+seaborn
+
+# Interactive plotting library, often used with Shiny apps (~20-25 MB)
+#plotly
+
+# ======================================================
+# GUI BACKEND FOR MATPLOTLIB ANIMATIONS (macOS/Linux only)
+# ======================================================
+
+# Qt-based GUI framework for interactive plotting and animations (~50-60 MB)
+PyQt6; sys_platform != "win32"
+
+# ======================================================
 # KAFKA MESSAGE BROKER INTEGRATION
 # ======================================================
 
+# Apache Kafka Python client (six was removed so add it separately)
+kafka-python
 six
-kafka-python-ng
 
-# ======================================================
-# DATABASE INTEGRATION 
-# ======================================================
-
-# sqlite3 is part of Python Std Lib - no need to install it 
-# Other popular tools include the following.
-
-# SQLAlchemy - SQL toolkit and Object-Relational Mapping (ORM) library
-# Uncomment the line below to install SQLAlchemy.
-# SQLAlchemy
-
-# psycopg2 - PostgreSQL database adapter for Python
-# Uncomment the line below to install psycopg2.
-# psycopg2
-
-# PyMySQL - MySQL client library
-# Uncomment the line below to install PyMySQL.
-# PyMySQL
+# Alternative: pin the older version.
+# If you want to use the older version of kafka-python,
+# comment out the two lines above and uncomment the line below.
+#kafka-python==2.0.2
