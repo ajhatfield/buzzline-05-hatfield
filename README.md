@@ -1,6 +1,6 @@
 # buzzline-05-case
 
-Using this producer and consumer, you will be able to get the average sentiment of each author. This way, you can tell if the author of each sentence has any effect on what the sentiment of the sentence will be. 
+Using this producer and consumer, you will be able to get the average sentiment of each author. This way, you can tell if the author of each sentence has any effect on what the sentiment of the sentence will be. It outputs into a database named "sentiment.db." There will be two tables - messages and author_sentiment. The messages table will show you all the messages processed and the author_sentiment will show you the author name vs the average sentiment. 
 
 ## VS Code Extensions
 
