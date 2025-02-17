@@ -159,6 +159,23 @@ def get_mongodb_collection() -> str:
     logger.info(f"MONGODB_COLLECTION: {collection}")
     return collection
 
+# Returns the interval in seconds for reading messages from the live data file
+def get_message_interval_seconds_as_int():
+    return int(os.getenv("MESSAGE_INTERVAL_SECONDS", 5))  # Default to 5 seconds if not set
+
+# Returns the path to the live data file
+def get_live_data_path():
+    return r"C:\Users\Owner\Desktop\buzzline-05-hatfield\data\project_live.json"
+
+# Returns the path where the processed messages CSV will be saved
+import pathlib
+
+def get_messages_csv_path():
+    return str(pathlib.Path(__file__).parent.parent / 'data' / 'messages.csv')
+
+# Returns the path where the author sentiment data CSV will be saved
+def get_author_sentiment_csv_path():
+    return os.getenv("AUTHOR_SENTIMENT_CSV_PATH", "/path/to/author_sentiment.csv")
 
 #####################################
 # Conditional Execution
