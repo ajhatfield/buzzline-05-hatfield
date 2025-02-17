@@ -1,9 +1,6 @@
 # buzzline-05-case
 
-Nearly every streaming analytics system stores processed data somewhere for further analysis, historical reference, or integration with BI tools.
-
-In this example project, we incorporate a relational data store. 
-We use SQLite, but the example could be altered to work with MySQL, PostgreSQL, or MongoDB.
+Using this producer and consumer, you will be able to get the average sentiment of each author. This way, you can tell if the author of each sentence has any effect on what the sentiment of the sentence will be. 
 
 ## VS Code Extensions
 
@@ -96,9 +93,7 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.kafka_consumer_case
-OR
-py -m consumers.file_consumer_case
+py -m consumers.consumer_hatfield
 ```
 
 Mac/Linux:
